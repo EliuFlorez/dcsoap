@@ -1,0 +1,19 @@
+{
+    "name" : "dcarbone",
+    "type" : "library",
+    "description" : "Simple SOAP Client for PHP",
+    "keywords" : ["soap", "soapclient"],
+    "homepage" : "https://github.com/dcarbone/dcsoap",
+    "license" : "MIT",
+    "authors" : [
+        {"name" : "Daniel Carbone", "email" : "daniel.p.carbone@gmail.com"}
+    ],
+    "require" : {
+        "php" : ">=5.3.3"
+    },
+    "autoload" : {
+        "psr-0" : {
+            "DCarbone\\DCSOAP\\" : "lib/"
+        }
+    }
+}
