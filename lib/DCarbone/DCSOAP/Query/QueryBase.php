@@ -189,7 +189,12 @@ XML;
 
         $this->action->getActionOutput($soapBody[0], 'ns1', $this->wsdl->getTargetNamespace());
 
-        $this->soapAction = $this->wsdl->getTargetNamespace().$this->action->getName();
+        $targetNamespace = $this->wsdl->getTargetNamespace();
+
+        if (substr($targetNamespace, -1) !== '/')
+            $this->soapAction = $targetNamespace.'/'.$this->action->getName();
+        else
+            $this->soapAction = $targetNamespace.$this->action->getName();
     }
 
     /**

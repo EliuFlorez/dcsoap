@@ -36,7 +36,7 @@ class FaultBase implements \Countable, \RecursiveIterator, \SeekableIterator, \A
 
         $this->parse();
 
-        $this->positionKeys = array_keys($this->data);
+        $this->positionKeys = array_keys($this->faultData);
         $this->position = reset($this->positionKeys);
     }
 
@@ -44,7 +44,7 @@ class FaultBase implements \Countable, \RecursiveIterator, \SeekableIterator, \A
      * Magic getter method
      *
      * @param $parameter
-     * @return string
+     * @return string|null
      */
     public function __get($parameter)
     {
@@ -55,10 +55,9 @@ class FaultBase implements \Countable, \RecursiveIterator, \SeekableIterator, \A
             else
                 return $this->faultData[$parameter];
         }
-        else
-        {
-            trigger_error('Undefined property: '.get_class($this).'::$'.$parameter);
-        }
+
+        trigger_error('Undefined property: '.get_class($this).'::$'.$parameter);
+        return null;
     }
 
     /**
