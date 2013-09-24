@@ -9,7 +9,10 @@
         {"name" : "Daniel Carbone", "email" : "daniel.p.carbone@gmail.com"}
     ],
     "require" : {
-        "php" : ">=5.3.3"
+        "php" : ">=5.3.3",
+        "lib-curl" : "*",
+        "lib-libxml" : "*",
+        "lib-openssl" : "*"
     },
     "autoload" : {
         "psr-0" : {
