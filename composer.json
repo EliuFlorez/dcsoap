@@ -1,5 +1,5 @@
 {
-    "name" : "dcarbone",
+    "name" : "dcarbone/dcsoap",
     "type" : "library",
     "description" : "Simple SOAP Client for PHP",
     "keywords" : ["soap", "soapclient"],
